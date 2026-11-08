@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Роман Дидковский — отчёт депутата · 5 округ · 2026</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Unbounded:wght@700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ================= БАЗА ================= */
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  color:#1A1A1A;
+  background:#F7F8FA;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;height:auto;}
+a{color:inherit;text-decoration:none;}
+button{font:inherit;cursor:pointer;}
+h1,h2,h3,h4{
+  font-family:'Unbounded','Montserrat',system-ui,sans-serif;
+  font-weight:800;
+  letter-spacing:-.01em;
+  line-height:1.15;
+  margin:0;
+  color:#101828;
+}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+
+/* ================= ХЕДЕР ================= */
+.site-header{
+  position:sticky;top:0;z-index:60;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:saturate(180%) blur(12px);
+  -webkit-backdrop-filter:saturate(180%) blur(12px);
+  border-bottom:1px solid #E3E7EE;
+}
+.flag{
+  height:5px;
+  background:linear-gradient(to bottom,#fff 0 33.33%,#0A3D91 33.33% 66.66%,#C8102E 66.66% 100%);
+  box-shadow:inset 0 -1px 0 rgba(16,29,54,.12);
+}
+.header-inner{display:flex;align-items:center;gap:20px;height:64px;}
+.brand{display:flex;align-items:center;gap:11px;flex:0 0 auto;min-width:0;}
+.brand img{width:38px;height:36px;object-fit:contain;flex:0 0 auto;}
+.brand > span{min-width:0;}
+.brand-name{
+  display:block;
+  font-family:'Unbounded',system-ui,sans-serif;
+  font-size:13px;font-weight:800;line-height:1.1;
+  color:#101828;letter-spacing:-.01em;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.brand-sub{display:block;font-size:10.5px;font-weight:600;color:#8A93A3;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+
+.nav{
+  margin-left:auto;display:flex;gap:2px;
+  overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
+  padding:4px 0;
+  -webkit-overflow-scrolling:touch;
+}
+.nav::-webkit-scrollbar{display:none;}
+.nav a{
+  flex:0 0 auto;
+  padding:8px 11px;border-radius:9px;
+  font-size:12.5px;font-weight:600;color:#5B6474;
+  white-space:nowrap;
+  transition:background .15s,color .15s;
+}
+.nav a:hover{background:#EEF1F6;color:#0A3D91;}
+.nav a.active{background:#E8EEFB;color:#0A3D91;}
+
+/* ================= СТРАНИЦЫ ================= */
+main{padding-bottom:20px;}
+.page{display:none;}
+.page.active{display:block;}
+
+.section{padding:36px 0;}
+.section:first-child{padding-top:34px;}
+
+.kicker{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;
+  color:#0A3D91;margin-bottom:10px;
+}
+.kicker::before{content:"";width:22px;height:2px;border-radius:2px;background:#C8102E;flex:0 0 auto;}
+
+.section-head{margin-bottom:22px;}
+
+/* ================= КАРТОЧКИ ================= */
+.card{
+  background:#fff;
+  border:1px solid #EDF0F5;
+  border-radius:18px;
+  box-shadow:0 6px 22px rgba(16,29,54,.07), 0 1px 3px rgba(16,29,54,.05);
+}
+.ph{
+  width:100%;height:100%;object-fit:cover;
+  border-radius:14px;background:#DDE3EC;
+}
+
+/* ================= ГЛАВНАЯ · HERO ================= */
+.hero{
+  display:grid;grid-template-columns:1.15fr .85fr;
+  gap:48px;align-items:center;
+  padding:40px 0 8px;
+}
+.hero-title{
+  font-size:clamp(26px,4.2vw,52px);
+  line-height:1.05;letter-spacing:-.02em;text-transform:uppercase;
+}
+.hero-sub{font-size:15px;color:#5B6474;max-width:540px;margin:18px 0 0;}
+.hero-name{
+  font-family:'Unbounded',system-ui,sans-serif;
+  font-size:clamp(16px,2.2vw,20px);
+  font-weight:800;color:#0A3D91;margin:22px 0 0;
+}
+.hero-actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap;}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:12px 22px;border-radius:12px;
+  font-size:13.5px;font-weight:700;
+  transition:background .15s,border-color .15s;
+  min-height:44px;
+}
+.btn-primary{background:#0A3D91;color:#fff;box-shadow:0 8px 20px rgba(10,61,145,.22);}
+.btn-primary:hover{background:#1E4FD8;}
+.btn-ghost{background:#fff;color:#0A3D91;border:1px solid #DCE3F0;}
+.btn-ghost:hover{border-color:#1E4FD8;}
+
+.hero-photo{display:flex;justify-content:center;}
+.hero-photo img{
+  width:100%;max-width:360px;height:440px;
+  object-fit:cover;object-position:center top;
+  border-radius:22px;
+  box-shadow:0 30px 60px rgba(16,29,54,.18);
+}
+
+/* ================= ОБРАЩЕНИЕ ================= */
+.intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;}
+.intro-card{
+  padding:28px 30px;border-left:4px solid #1E4FD8;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.intro-lead{
+  font-family:'Unbounded',system-ui,sans-serif;
+  font-size:14px;font-weight:700;color:#0A3D91;margin:0 0 14px;
+}
+.intro-card p{font-size:14.5px;line-height:1.65;color:#2B3340;margin:0 0 14px;}
+.intro-card p:last-child{margin-bottom:0;}
+.intro-sign{
+  display:flex;align-items:center;gap:9px;
+  font-size:12.5px !important;font-weight:700;color:#8A93A3 !important;
+  margin:4px 0 0 !important;
+}
+.intro-sign::before{content:"";width:20px;height:2px;border-radius:2px;background:#C8102E;flex:0 0 auto;}
+
+.intro-photos{display:grid;grid-template-rows:1.3fr 1fr;gap:12px;min-height:380px;}
+.intro-photos .ph-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;min-height:0;}
+.intro-photos .ph-row img{height:100%;}
+
+/* ================= ВИДЕО (ВК) ================= */
+.video-card{padding:14px;display:flex;flex-direction:column;gap:12px;}
+.video-embed{
+  position:relative;
+  width:100%;
+  padding-top:56.25%; /* 16:9 */
+  border-radius:12px;
+  overflow:hidden;
+  background:#000;
+}
+.video-embed iframe{
+  position:absolute;
+  top:0;left:0;
+  width:100%;height:100%;
+  border:0;
+  display:block;
+}
+.video-note{
+  font-size:12px;color:#8A93A3;padding:0 6px 6px;line-height:1.5;
+}
+.video-note a{color:#0A3D91;font-weight:700;text-decoration:underline;}
+
+/* ================= СХЕМА ОКРУГА ================= */
+.map-card{padding:16px;display:flex;justify-content:center;}
+.map-card img{width:100%;max-width:900px;border-radius:12px;}
+
+/* ================= О ДЕПУТАТЕ ================= */
+.bio-grid{display:grid;grid-template-columns:280px 1fr 1fr;gap:22px;}
+.photo-card{padding:10px;}
+.photo-card img{
+  width:100%;height:100%;min-height:340px;
+  object-fit:cover;object-position:center top;border-radius:12px;
+}
+.bio-card{padding:24px;}
+.bio-eyebrow{
+  font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;
+  color:#8A93A3;margin-bottom:8px;
+}
+.bio-name{
+  font-size:17px;font-weight:800;line-height:1.2;text-transform:uppercase;
+  margin:0 0 8px;
+}
+.bio-name .accent{color:#0A3D91;}
+.bio-date{
+  display:flex;align-items:center;gap:7px;
+  font-size:12px;font-weight:700;color:#C8102E;margin-bottom:12px;
+}
+.bio-date::before{content:"";width:6px;height:6px;border-radius:50%;background:#C8102E;flex:0 0 auto;}
+.bio-list{list-style:none;margin:0;padding:0;}
+.bio-list li{
+  position:relative;
+  padding:7px 0 7px 15px;
+  border-top:1px solid #EEF1F6;
+  font-size:13px;line-height:1.45;color:#333B49;
+}
+.bio-list li:first-child{border-top:none;}
+.bio-list li::before{
+  content:"";position:absolute;left:0;top:14px;
+  width:5px;height:5px;border-radius:50%;background:#1E4FD8;
+}
+.facts-card{padding:24px;}
+.card-title{
+  font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+  color:#0A3D91;margin-bottom:16px;
+}
+.ticks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;}
+.ticks li{
+  position:relative;padding-left:24px;
+  font-size:13.5px;line-height:1.5;color:#2B3340;
+}
+.ticks li::before{
+  content:"";position:absolute;left:0;top:6px;
+  width:11px;height:5px;
+  border-left:2px solid #1E4FD8;border-bottom:2px solid #1E4FD8;
+  transform:rotate(-45deg);border-radius:1px;
+}
+
+/* ================= РЕЙТИНГ ================= */
+.rating-grid{display:grid;grid-template-columns:1.55fr .55fr;gap:22px;}
+.chart{padding:32px 34px;display:flex;flex-direction:column;gap:24px;}
+.chart-row{display:grid;grid-template-columns:200px 1fr 64px;align-items:center;gap:20px;}
+.chart-label{font-size:14px;font-weight:600;color:#2B3340;}
+.chart-track{height:26px;border-radius:13px;background:#EEF1F6;overflow:hidden;}
+.chart-fill{height:100%;border-radius:13px;background:linear-gradient(90deg,#0A3D91,#1E4FD8);}
+.chart-fill.top{background:linear-gradient(90deg,#A50D26,#C8102E);}
+.chart-val{
+  font-family:'Unbounded',system-ui,sans-serif;
+  font-size:18px;font-weight:800;text-align:right;color:#0A3D91;
+}
+.chart-val.top{color:#C8102E;}
+
+.total-card{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:10px;text-align:center;padding:28px 20px;
+}
+.total-num{
+  font-family:'Unbounded',system-ui,sans-serif;
+  font-size:72px;font-weight:800;line-height:1;color:#0A3D91;
+}
+.total-cap{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8A93A3;}
+.total-note{font-size:12px;line-height:1.45;color:#5B6474;max-width:220px;}
+
+/* ================= ЦИФРЫ ================= */
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.stat{padding:26px;display:flex;flex-direction:column;gap:10px;}
+.stat b{
+  font-family:'Unbounded',system-ui,sans-serif;
+  font-size:44px;font-weight:800;line-height:1;color:#0A3D91;
+}
+.stat span{font-size:12.5px;color:#5B6474;line-height:1.4;}
+
+/* ================= БЛАГОУСТРОЙСТВО ================= */
+.note-line{
+  padding:14px 20px;border-radius:14px;
+  border:1px solid #E3E7EE;background:#fff;
+  font-size:13px;line-height:1.5;color:#5B6474;
+  box-shadow:0 2px 8px rgba(16,29,54,.04);
+  margin-bottom:22px;
+}
+.note-line b{color:#0A3D91;font-weight:800;}
+
+.subsection{margin-bottom:34px;}
+.subsection:last-child{margin-bottom:0;}
+.subsection h3{font-size:20px;margin-bottom:16px;}
+
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;}
+.split.rev{grid-template-columns:.9fr 1.1fr;}
+
+.photo-stack{display:flex;flex-direction:column;gap:12px;}
+.photo-stack .ph{height:210px;}
+.photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.photo-grid .ph{height:190px;}
+
+.info-card{padding:24px;display:flex;flex-direction:column;justify-content:center;gap:14px;}
+.money-num{
+  font-family:'Unbounded',system-ui,sans-serif;
+  font-size:34px;font-weight:800;line-height:1;color:#0A3D91;
+}
+.money-cap{font-size:13px;line-height:1.55;color:#5B6474;}
+
+/* ================= МЕРОПРИЯТИЯ ================= */
+.events-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.event{display:flex;flex-direction:column;gap:10px;}
+.event .ph{height:200px;box-shadow:0 6px 22px rgba(16,29,54,.09);}
+.event .label{font-size:13.5px;font-weight:700;color:#101828;line-height:1.3;}
+
+.youth-text{padding:22px 26px;border-left:4px solid #1E4FD8;margin:26px 0 20px;}
+.youth-text p{margin:0;font-size:14px;line-height:1.6;color:#2B3340;}
+.youth-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.figure{display:flex;flex-direction:column;gap:9px;}
+.figure .ph{height:230px;box-shadow:0 6px 22px rgba(16,29,54,.09);}
+.fig-cap{font-size:12px;line-height:1.4;color:#5B6474;}
+
+/* ================= НАКАЗЫ ================= */
+.nakaz-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.nakaz{display:flex;flex-direction:column;gap:12px;}
+.nakaz img{width:100%;height:190px;object-fit:cover;border-radius:14px;}
+.nakaz-text{
+  display:flex;gap:12px;padding:14px 16px;
+  background:#fff;border:1px solid #EDF0F5;border-radius:14px;
+  font-size:13px;line-height:1.45;color:#2B3340;
+  box-shadow:0 4px 14px rgba(16,29,54,.05);
+  flex:1 1 auto;
+}
+.nakaz-num{
+  font-family:'Unbounded',system-ui,sans-serif;
+  font-size:15px;font-weight:800;line-height:1.3;
+  color:#C8102E;flex:0 0 auto;
+}
+
+/* ================= ИНИЦИАТИВЫ ================= */
+.init-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.init{padding:24px 28px;border-left:4px solid #1E4FD8;}
+.init-name{
+  font-family:'Unbounded',system-ui,sans-serif;
+  font-size:15px;font-weight:700;line-height:1.25;
+  color:#0A3D91;margin-bottom:8px;
+}
+.init-desc{font-size:13.5px;line-height:1.5;color:#2B3340;}
+
+/* ================= КОМИССИЯ ================= */
+.comm-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:22px;}
+.comm-text{padding:28px 30px;border-left:4px solid #C8102E;display:flex;flex-direction:column;justify-content:center;}
+.comm-text p{margin:0 0 14px;font-size:14px;line-height:1.62;color:#2B3340;}
+.comm-text p:last-child{margin-bottom:0;}
+.comm-photo{padding:10px;}
+.comm-photo img{width:100%;height:100%;min-height:320px;object-fit:cover;border-radius:12px;}
+
+/* ================= ВЕТЕРАНЫ ================= */
+.assoc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.assoc{padding:24px;display:flex;flex-direction:column;gap:8px;}
+.assoc b{
+  font-family:'Unbounded',system-ui,sans-serif;
+  font-size:30px;font-weight:800;line-height:1;color:#0A3D91;
+}
+.assoc span{font-size:12px;line-height:1.45;color:#5B6474;}
+.assoc.summary{background:linear-gradient(160deg,#0A3D91,#1E4FD8);border-color:#0A3D91;}
+.assoc.summary b{font-size:15px;color:#fff;line-height:1.3;}
+.assoc.summary span{color:rgba(255,255,255,.82);}
+
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.proj{padding:26px 28px;}
+.proj-title{
+  font-family:'Unbounded',system-ui,sans-serif;
+  font-size:15px;font-weight:700;line-height:1.3;
+  color:#0A3D91;margin-bottom:10px;
+}
+.proj-desc{font-size:13.5px;line-height:1.55;color:#2B3340;}
+
+/* ================= ПОДВАЛ ================= */
+.site-footer{border-top:1px solid #E3E7EE;background:#fff;padding:26px 0;margin-top:20px;}
+.footer-inner{
+  display:flex;justify-content:space-between;align-items:center;
+  gap:16px;flex-wrap:wrap;
+  font-size:12.5px;color:#8A93A3;
+}
+.footer-brand{font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#0A3D91;}
+
+/* ================= АДАПТИВ ================= */
+
+/* Планшеты, горизонтальные */
+@media (max-width:1024px){
+  .bio-grid{grid-template-columns:240px 1fr;}
+  .bio-grid .facts-card{grid-column:1 / -1;}
+  .events-grid{grid-template-columns:repeat(2,1fr);}
+  .nakaz-grid{grid-template-columns:repeat(2,1fr);}
+  .assoc-grid{grid-template-columns:repeat(2,1fr);}
+}
+
+/* Планшеты вертикальные */
+@media (max-width:880px){
+  .section{padding:28px 0;}
+  .section:first-child{padding-top:26px;}
+  .hero{grid-template-columns:1fr;gap:32px;padding-top:24px;text-align:left;}
+  .hero-photo{order:-1;}
+  .hero-photo img{max-width:320px;height:390px;}
+  .hero-actions{margin-top:22px;}
+  .intro-grid{grid-template-columns:1fr;}
+  .intro-photos{min-height:320px;}
+  .bio-grid{grid-template-columns:1fr;}
+  .photo-card img{min-height:380px;}
+  .rating-grid{grid-template-columns:1fr;}
+  .split,.split.rev{grid-template-columns:1fr;}
+  .split.rev .info-card{order:2;}
+  .stats-grid{grid-template-columns:1fr 1fr;}
+  .init-grid{grid-template-columns:1fr;}
+  .comm-grid{grid-template-columns:1fr;}
+  .comm-text{order:2;}
+  .comm-photo{order:1;}
+  .proj-grid{grid-template-columns:1fr;}
+  .chart-row{grid-template-columns:130px 1fr 50px;gap:12px;}
+}
+
+/* Смартфоны */
+@media (max-width:640px){
+  .wrap{padding:0 16px;}
+
+  .header-inner{
+    height:auto;
+    padding:10px 0 0;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .brand img{width:34px;height:32px;}
+  .brand-name{font-size:12.5px;}
+  .brand-sub{font-size:10px;}
+  .nav{
+    margin-left:0;
+    width:100%;
+    padding:6px 0 10px;
+    border-top:1px solid #EEF1F6;
+    margin-top:8px;
+    gap:0;
+  }
+  .nav a{padding:8px 10px;font-size:12px;}
+
+  .section{padding:22px 0;}
+  .section:first-child{padding-top:20px;}
+
+  h1.hero-title{font-size:26px;line-height:1.1;}
+  .hero{padding-top:18px;gap:24px;}
+  .hero-sub{font-size:14px;margin-top:14px;}
+  .hero-name{font-size:17px;margin-top:16px;}
+  .hero-photo img{max-width:100%;height:340px;border-radius:18px;}
+  .hero-actions{gap:10px;}
+  .btn{padding:11px 18px;font-size:13px;flex:1 1 auto;}
+
+  .intro-card{padding:20px 22px;}
+  .intro-card p{font-size:14px;}
+  .intro-photos{min-height:280px;gap:10px;}
+  .intro-photos .ph-row{gap:10px;}
+
+  .section-head h2{font-size:22px;line-height:1.2;}
+  .subsection h3{font-size:17px;}
+
+  .photo-card img{min-height:300px;}
+  .bio-card,.facts-card{padding:20px;}
+  .bio-name{font-size:15px;}
+  .bio-list li,.ticks li{font-size:13px;}
+
+  .chart{padding:22px 18px;gap:18px;}
+  .chart-row{grid-template-columns:110px 1fr 44px;gap:10px;}
+  .chart-label{font-size:12.5px;}
+  .chart-val{font-size:15px;}
+  .chart-track{height:20px;}
+  .total-num{font-size:56px;}
+
+  .stats-grid{grid-template-columns:1fr;gap:12px;}
+  .stat{padding:20px;}
+  .stat b{font-size:38px;}
+
+  .events-grid{grid-template-columns:1fr;gap:16px;}
+  .event .ph{height:220px;}
+  .youth-photos{grid-template-columns:1fr;gap:16px;}
+  .figure .ph{height:230px;}
+  .youth-text{padding:18px 20px;}
+
+  .nakaz-grid{grid-template-columns:1fr;gap:16px;}
+  .nakaz img{height:200px;}
+
+  .assoc-grid{grid-template-columns:1fr;gap:12px;}
+  .assoc{padding:20px;}
+  .assoc b{font-size:26px;}
+
+  .init{padding:20px 22px;}
+  .proj{padding:22px;}
+  .comm-text{padding:22px;}
+  .comm-photo img{min-height:220px;}
+
+  .photo-grid{grid-template-columns:1fr;gap:12px;}
+  .photo-grid .ph{height:210px;}
+  .photo-stack .ph{height:200px;}
+
+  .map-card{padding:10px;}
+
+  .note-line{padding:12px 16px;font-size:12.5px;margin-bottom:18px;}
+
+  .video-card{padding:10px;}
+  .video-note{font-size:11.5px;padding:0 4px 4px;}
+
+  .footer-inner{flex-direction:column;align-items:flex-start;gap:8px;font-size:12px;}
+}
+
+/* Очень маленькие экраны */
+@media (max-width:380px){
+  .wrap{padding:0 14px;}
+  h1.hero-title{font-size:23px;}
+  .hero-photo img{height:300px;}
+  .nav a{padding:8px 8px;font-size:11.5px;}
+  .chart-row{grid-template-columns:90px 1fr 40px;gap:8px;}
+  .chart-label{font-size:11.5px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     ХЕДЕР + НАВИГАЦИЯ
+     ============================================================ -->
+<header class="site-header">
+  <div class="flag" aria-hidden="true"></div>
+  <div class="wrap header-inner">
+    <a class="brand" href="#home">
+      <img src="ЕР_Лого.png" alt="Логотип партии «Единая Россия»">
+      <span>
+        <span class="brand-name">Роман Дидковский</span>
+        <span class="brand-sub">Дума г.о. Тольятти · 5 округ</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Разделы отчёта">
+      <a href="#home"        data-target="home">Главная</a>
+      <a href="#about"       data-target="about">О депутате</a>
+      <a href="#rating"      data-target="rating">Рейтинг проблем</a>
+      <a href="#residents"   data-target="residents">Работа с жителями</a>
+      <a href="#improvement" data-target="improvement">Благоустройство</a>
+      <a href="#events"      data-target="events">Мероприятия</a>
+      <a href="#nakazy"      data-target="nakazy">Наказы жителей</a>
+      <a href="#initiatives" data-target="initiatives">Поддержка инициатив</a>
+      <a href="#commission"  data-target="commission">Постоянная комиссия</a>
+      <a href="#veterans"    data-target="veterans">Поддержка ветеранов СВО</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================================
+     ГЛАВНАЯ
+     ============================================================ -->
+<section id="home" class="page active">
+  <div class="wrap">
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-text">
+        <div class="kicker">Отчёт депутата · 2026 год</div>
+        <h1 class="hero-title">Энергия добра — на благо города!</h1>
+        <p class="hero-sub">
+          Отчёт депутата Думы городского округа Тольятти VIII созыва
+          по одномандатному избирательному округу № 5
+        </p>
+        <p class="hero-name">Роман Андреевич Дидковский</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#about">О депутате</a>
+          <a class="btn btn-ghost" href="#video">Смотреть видеоотчёт</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="Фото1.jpg" alt="Роман Андреевич Дидковский">
+      </div>
+    </div>
+
+    <!-- Обращение -->
+    <div class="section">
+      <div class="section-head">
+        <div class="kicker">Слово депутата</div>
+        <h2>Уважаемые жители 5 округа, дорогие друзья!</h2>
+      </div>
+
+      <div class="intro-grid">
+        <article class="card intro-card">
+          <p class="intro-lead">Роман Дидковский:</p>
+          <p>
+            За этот год мы многое сделали для развития нашего округа.
+            Каждый проект, каждая отремонтированная дорога или благоустроенный двор —
+            результат наших с вами встреч и общих усилий.
+          </p>
+          <p>
+            Я благодарен вам за конструктивный подход и постоянную обратную связь.
+            Этот отчёт доказывает, что когда жители и депутат работают как одна команда,
+            проекты и идеи становятся реальностью.
+          </p>
+          <p class="intro-sign">С уважением, Роман Дидковский</p>
+        </article>
+
+        <div class="intro-photos">
+          <img class="ph" src="Встреча_1.jpg" alt="Встреча с жителями округа">
+          <div class="ph-row">
+            <img class="ph" src="Встреча_2.jpg" alt="Встреча с жителями округа">
+            <img class="ph" src="Встреча_3.jpg" alt="Встреча с жителями округа">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Видеоотчёт -->
+    <div class="section" id="video">
+      <div class="section-head">
+        <div class="kicker">Видеоотчёт</div>
+        <h2>Отчёт о работе · октябрь 2026</h2>
+      </div>
+
+      <div class="card video-card">
+        <div class="video-embed">
+          <iframe
+            src="https://vk.ru/video_ext.php?oid=43591&id=456240168&hash=897688e788bd2a8f"
+            frameborder="0"
+            allowfullscreen="1"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            title="Видеоотчёт Романа Дидковского о работе за октябрь 2026">
+          </iframe>
+        </div>
+        <div class="video-note">
+          Видеоотчёт также доступен на странице депутата ВКонтакте:
+          <a href="https://vk.ru/romandidkovsky?z=video43591_456240168%2F897688e788bd2a8f"
+             target="_blank" rel="noopener">vk.ru/romandidkovsky</a>.
+        </div>
+      </div>
+    </div>
+
+    <!-- Схема округа -->
+    <div class="section">
+      <div class="section-head">
+        <div class="kicker">Границы работы</div>
+        <h2>Схема избирательного округа № 5</h2>
+      </div>
+      <div class="card map-card">
+        <img src="Схема_округа.jpg" alt="Схема избирательного округа № 5">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     О ДЕПУТАТЕ
+     ============================================================ -->
+<section id="about" class="page">
+  <div class="wrap section">
+    <div class="section-head">
+      <div class="kicker">Биографическая справка</div>
+      <h2>Кто ваш депутат</h2>
+    </div>
+
+    <div class="bio-grid">
+      <div class="card photo-card">
+        <img src="Фото1.jpg" alt="Роман Андреевич Дидковский">
+      </div>
+
+      <div class="card bio-card">
+        <div class="bio-eyebrow">Данные из биографии</div>
+        <h3 class="bio-name"><span class="accent">Дидковский</span><br>Роман Андреевич</h3>
+        <div class="bio-date">13 августа 1989 г.</div>
+        <ul class="bio-list">
+          <li>Окончил лицей № 51</li>
+          <li>Служил в 810-й отдельной Гвардейской орденов Жукова и Ушакова бригаде морской пехоты</li>
+          <li>В 2012 году окончил ПВГУС</li>
+          <li>В 2024 году получил второе высшее образование в Самарской академии государственного управления</li>
+          <li>Женат, воспитывает двоих сыновей</li>
+        </ul>
+      </div>
+
+      <div class="card facts-card">
+        <div class="card-title">Факты о депутате</div>
+        <ul class="ticks">
+          <li>Председатель постоянной комиссии по контролю, общественной безопасности и соблюдению депутатской этики в Думе г.о. Тольятти</li>
+          <li>Первый заместитель руководителя Ассоциации ветеранов СВО Самарской области</li>
+          <li>Директор муниципального бюджетного учреждения «Зеленстрой»</li>
+          <li>Инициатор и один из создателей команды по следж-хоккею «Лада — следж» (г. Тольятти), оказывал помощь в создании следж-хоккейной команды «ЦСК ВВС Следж» (г. Самара)</li>
+          <li>Инициатор и создатель Центра отдыха и реабилитации для участников СВО и членов их семей на п-ве Копылово</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     РЕЙТИНГ ПРОБЛЕМ
+     ============================================================ -->
+<section id="rating" class="page">
+  <div class="wrap section">
+    <div class="section-head">
+      <div class="kicker">Статистика обращений</div>
+      <h2>Рейтинг острых тем в 2026 году</h2>
+    </div>
+
+    <div class="rating-grid">
+      <div class="card chart">
+        <div class="chart-row">
+          <div class="chart-label">Благоустройство</div>
+          <div class="chart-track"><div class="chart-fill top" style="width:100%"></div></div>
+          <div class="chart-val top">31</div>
+        </div>
+        <div class="chart-row">
+          <div class="chart-label">ЖКХ</div>
+          <div class="chart-track"><div class="chart-fill" style="width:48.4%"></div></div>
+          <div class="chart-val">15</div>
+        </div>
+        <div class="chart-row">
+          <div class="chart-label">Социальные вопросы</div>
+          <div class="chart-track"><div class="chart-fill" style="width:19.4%"></div></div>
+          <div class="chart-val">6</div>
+        </div>
+        <div class="chart-row">
+          <div class="chart-label">Безопасность</div>
+          <div class="chart-track"><div class="chart-fill" style="width:12.9%"></div></div>
+          <div class="chart-val">4</div>
+        </div>
+      </div>
+
+      <div class="card total-card">
+        <div class="total-num">56</div>
+        <div class="total-cap">обращений всего</div>
+        <div class="total-note">по итогам личных приёмов, встреч и работы с наказами жителей</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     РАБОТА С ЖИТЕЛЯМИ
+     ============================================================ -->
+<section id="residents" class="page">
+  <div class="wrap section">
+    <div class="section-head">
+      <div class="kicker">Цифры года</div>
+      <h2>Работа с обращениями в цифрах</h2>
+    </div>
+
+    <div class="stats-grid">
+      <div class="card stat"><b>20</b><span>личных приёмов жителей проведено</span></div>
+      <div class="card stat"><b>74</b><span>жителя принято на личных приёмах</span></div>
+      <div class="card stat"><b>31</b><span>встреча с жителями округа проведена</span></div>
+      <div class="card stat"><b>34</b><span>жителям оказана консультативная помощь</span></div>
+      <div class="card stat"><b>43</b><span>запроса решено положительно</span></div>
+      <div class="card stat"><b>52</b><span>запроса депутата направлено в различные ведомства</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     БЛАГОУСТРОЙСТВО
+     ============================================================ -->
+<section id="improvement" class="page">
+  <div class="wrap section">
+    <div class="section-head">
+      <div class="kicker">Благоустройство округа</div>
+      <h2>Что сделано в 2026 году</h2>
+    </div>
+
+    <div class="note-line">
+      Согласно адресному перечню по муниципальной программе «Благоустройство городского округа Тольятти
+      на 2025–2030 годы» в 2026 году направлено <b>8 млн ₽</b> на благоустройство.
+    </div>
+
+    <!-- Инфраструктура для детей -->
+    <div class="subsection">
+      <h3>Инфраструктура для детей</h3>
+      <div class="split">
+        <div class="photo-stack">
+          <img class="ph" src="Площадка_59.jpg" alt="Новая площадка у школы № 59">
+          <img class="ph" src="Площадка_Фрунзе.jpg" alt="Новая площадка в Семейном сквере">
+        </div>
+
+        <div class="card facts-card">
+          <div class="card-title">Что сделано</div>
+          <ul class="ticks">
+            <li>В сквере между домом № 71 по ул. Ст. Разина и школой № 59 — площадка с безопасным покрытием, горка, МАФы</li>
+            <li>В Семейном сквере между домом № 7 по ул. Фрунзе и школой № 59 — площадка с безопасным покрытием, горка, МАФы, теннисный стол</li>
+            <li>Выполнен ремонт напольного покрытия в спортивном зале МБУ «Школа № 59»</li>
+            <li>Приобретена новая школьная мебель для МБУ «Лицей № 67»</li>
+            <li>Выполнен монтаж системы видеонаблюдения в д/с «Русалочка»</li>
+            <li>В детских садиках 11-го квартала заменены оконные блоки</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Дорожная инфраструктура -->
+    <div class="subsection">
+      <h3>Дорожная инфраструктура</h3>
+      <div class="split">
+        <div class="photo-grid">
+          <img class="ph" src="Тротуар.jpg" alt="Новый тротуар по ул. М. Жукова">
+          <img class="ph" src="М. Жукова_24.jpg" alt="Ремонт проезжей части по ул. Маршала Жукова, 24">
+          <img class="ph" src="Аллея.jpg" alt="Пешеходная дорога вдоль домов № 12 по ул. М. Жукова и № 1 по ул. Фрунзе">
+          <img class="ph" src="Карман_Степана Разина.jpg" alt="Дорожное покрытие от ул. Спортивной до ул. Фрунзе">
+        </div>
+
+        <div class="card info-card">
+          <div class="money-num">243 млн ₽</div>
+          <div class="money-cap">
+            Устройство дорожного покрытия от ул. Спортивной по проспекту Степана Разина
+            до улицы Фрунзе и внутриквартального проезда 11-го квартала вдоль проспекта
+            Степана Разина — за счёт средств бюджета города.
+          </div>
+          <ul class="ticks">
+            <li>Установлен тротуар напротив дома № 24 по ул. М. Жукова</li>
+            <li>Отремонтирована проезжая часть по ул. Маршала Жукова, д. 24</li>
+            <li>Устроено твёрдое покрытие пешеходной дороги с бордюрным камнем вдоль домов № 12 по ул. М. Жукова и № 1 по ул. Фрунзе, напротив сквера им. Г. К. Жукова, и части внутриквартального проезда</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Безопасность и освещение -->
+    <div class="subsection">
+      <h3>Безопасность и освещение</h3>
+      <div class="split rev">
+        <div class="card info-card">
+          <div class="money-num">7,2 млн ₽</div>
+          <div class="money-cap">
+            Выполнено устройство уличного освещения при подходе к общеобразовательным учреждениям
+            МБУ «Лицей № 67» и МБУ «Школа № 59».
+          </div>
+          <ul class="ticks">
+            <li>Освещены подходы к двум крупным школам округа</li>
+            <li>Повышена безопасность вечерних маршрутов школьников</li>
+          </ul>
+        </div>
+
+        <div class="photo-grid">
+          <img class="ph" src="Освещение_1.jpg" alt="Новое уличное освещение у школы">
+          <img class="ph" src="Освещение_2.jpg" alt="Новое уличное освещение у лицея">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     МЕРОПРИЯТИЯ
+     ============================================================ -->
+<section id="events" class="page">
+  <div class="wrap section">
+    <div class="section-head">
+      <div class="kicker">Спорт · праздники · кино</div>
+      <h2>Мероприятия для жителей</h2>
+    </div>
+
+    <div class="events-grid">
+      <div class="event">
+        <img class="ph" src="День_соседей.jpg" alt="День соседей">
+        <div class="label">День соседей</div>
+      </div>
+      <div class="event">
+        <img class="ph" src="Кинопоказ.jpg" alt="Кинопоказ во дворе">
+        <div class="label">Кинопоказ</div>
+      </div>
+      <div class="event">
+        <img class="ph" src="Спортивные_будни.jpg" alt="Турнир по боксу «Открытый ринг»">
+        <div class="label">Турнир по боксу «Открытый ринг»</div>
+      </div>
+      <div class="event">
+        <img class="ph" src="Пожилой_человек.jpg" alt="День пожилого человека">
+        <div class="label">День пожилого человека</div>
+      </div>
+    </div>
+
+    <!-- Работа с молодёжью -->
+    <div class="section-head" style="margin-top:38px;">
+      <div class="kicker">Молодёжная политика</div>
+      <h2>Работа с молодёжью</h2>
+    </div>
+
+    <div class="card youth-text">
+      <p>
+        Воспитание подрастающего поколения — основа будущего страны. Мы с командой
+        не ограничиваемся беседами: устраиваем для молодёжи мероприятия, вовлекаем
+        в организацию праздников, говорим с ними об истории и традиционных ценностях.
+        Так мы растим ответственных, инициативных и неравнодушных граждан.
+      </p>
+    </div>
+
+    <div class="youth-photos">
+      <div class="figure">
+        <img class="ph" src="Молодёжный_парламент.jpg" alt="Встреча с представителями Молодёжного парламента">
+        <div class="fig-cap">Встреча с представителями Молодёжного парламента при Думе г.о. Тольятти</div>
+      </div>
+      <div class="figure">
+        <img class="ph" src="Бал_кадетов.jpg" alt="Бал кадетов в ДДЮТ">
+        <div class="fig-cap">Бал кадетов в ДДЮТ</div>
+      </div>
+      <div class="figure">
+        <img class="ph" src="День_Победы.jpg" alt="Мероприятие, посвящённое Дню Победы">
+        <div class="fig-cap">Мероприятие, посвящённое Дню Победы</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     НАКАЗЫ ЖИТЕЛЕЙ
+     ============================================================ -->
+<section id="nakazy" class="page">
+  <div class="wrap section">
+    <div class="section-head">
+      <div class="kicker">Наказы избирателей</div>
+      <h2>Выполненные наказы по 5 округу</h2>
+    </div>
+
+    <div class="nakaz-grid">
+      <div class="nakaz">
+        <img src="Тротуар.jpg" alt="Пешеходная зона по ул. Маршала Жукова">
+        <div class="nakaz-text">
+          <span class="nakaz-num">01</span>
+          <span>Устройство пешеходной зоны, монтаж тротуарной дорожки из Ж/Б плит по улице Маршала Жукова между домом № 16В и сквером им. Маршала Жукова</span>
+        </div>
+      </div>
+
+      <div class="nakaz">
+        <img src="Освещение_1.jpg" alt="Уличное освещение у школ">
+        <div class="nakaz-text">
+          <span class="nakaz-num">02</span>
+          <span>Устройство уличного освещения при подходе к общеобразовательным учреждениям МБУ «Лицей № 67» и МБУ «Школа № 59»</span>
+        </div>
+      </div>
+
+      <div class="nakaz">
+        <img src="Недострой.jpg" alt="Ликвидированный недострой по ул. Степана Разина">
+        <div class="nakaz-text">
+          <span class="nakaz-num">03</span>
+          <span>Ликвидирован недострой по ул. Степана Разина</span>
+        </div>
+      </div>
+
+      <div class="nakaz">
+        <img src="Бетонолом.jpg" alt="Снос аварийных конструкций из бетонолома">
+        <div class="nakaz-text">
+          <span class="nakaz-num">04</span>
+          <span>Снесены три конструкции из бетонолома, признанные аварийными в 2022 году, между домом № 71 по пр. Степана Разина и МБУ «Школа № 59»</span>
+        </div>
+      </div>
+
+      <div class="nakaz">
+        <img src="Асфальт_Полянка.jpg" alt="Твёрдое покрытие дороги у д/с «Полянка»">
+        <div class="nakaz-text">
+          <span class="nakaz-num">05</span>
+          <span>Восстановлено твёрдое покрытие дороги с установкой бордюрного камня с западной стороны дома № 48 по ул. Маршала Жукова рядом с д/с «Полянка»</span>
+        </div>
+      </div>
+
+      <div class="nakaz">
+        <img src="Восстановленная площадка.jpg" alt="Восстановленная детская площадка возле дома № 71">
+        <div class="nakaz-text">
+          <span class="nakaz-num">06</span>
+          <span>Восстановлено благоустройство детской площадки возле дома № 71 по пр. Степана Разина после сноса аварийных конструкций</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ПОДДЕРЖКА ИНИЦИАТИВ
+     ============================================================ -->
+<section id="initiatives" class="page">
+  <div class="wrap section">
+    <div class="section-head">
+      <div class="kicker">Народный бюджет Самарской области</div>
+      <h2>Поддержка инициатив жителей</h2>
+    </div>
+
+    <div class="note-line">
+      Депутат Думы городского округа Тольятти VIII созыва по 5 округу
+      Дидковский Р. А. поддержал инициативные общественные проекты для участия
+      в государственной программе Самарской области «Народный бюджет Самарской области».
+    </div>
+
+    <div class="init-grid">
+      <div class="card init">
+        <div class="init-name">«Королевство игр»</div>
+        <div class="init-desc">Обустройство детской и спортивной площадок по ул. Маршала Жукова, д. 38</div>
+      </div>
+
+      <div class="card init">
+        <div class="init-name">«Любимый дом»</div>
+        <div class="init-desc">Восстановление асфальтобетонного покрытия тротуаров, подходов к подъездам и мусорокамерам по проспекту Степана Разина, д. 67</div>
+      </div>
+
+      <div class="card init">
+        <div class="init-name">«Дорожный комфорт»</div>
+        <div class="init-desc">Восстановление асфальтобетонного покрытия дорожного проезда, тротуаров, пешеходных дорожек, входных групп и парковочных мест по ул. Маршала Жукова, д. 34</div>
+      </div>
+
+      <div class="card init">
+        <div class="init-name">«Наш дом — наша дорога»</div>
+        <div class="init-desc">Восстановление асфальтобетонного покрытия внутридворового проезда и парковочных мест по ул. Спортивной, д. 85, 87, 89</div>
+      </div>
+
+      <div class="card init">
+        <div class="init-name">«Страна игр»</div>
+        <div class="init-desc">Обустройство детской и спортивной площадок по ул. Маршала Жукова, д. 22</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ПОСТОЯННАЯ КОМИССИЯ
+     ============================================================ -->
+<section id="commission" class="page">
+  <div class="wrap section">
+    <div class="section-head">
+      <div class="kicker">Депутатская деятельность</div>
+      <h2>Постоянная комиссия по контролю, общественной безопасности и соблюдению депутатской этики</h2>
+    </div>
+
+    <div class="comm-grid">
+      <div class="card comm-text">
+        <p>
+          <b>Роман Андреевич Дидковский</b> является председателем комиссии по контролю,
+          общественной безопасности и соблюдению депутатской этики.
+        </p>
+        <p>
+          Комиссия отвечает за большой блок вопросов, касающихся контроля за мероприятиями
+          по обеспечению общественной безопасности, обеспечением мер пожарной безопасности,
+          ликвидации последствий в случае возникновения ЧС и т.д., а также за соблюдением
+          депутатами Думы правил депутатской этики и законодательства.
+        </p>
+      </div>
+
+      <div class="card comm-photo">
+        <img src="Комиссия.jpg" alt="Заседание постоянной комиссии по контролю и общественной безопасности">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ПОДДЕРЖКА ВЕТЕРАНОВ СВО
+     ============================================================ -->
+<section id="veterans" class="page">
+  <div class="wrap section">
+    <div class="section-head">
+      <div class="kicker">СРОО «Возвращение» · Ассоциация ветеранов СВО</div>
+      <h2>Поддержка ветеранов СВО и их семей</h2>
+    </div>
+
+    <div class="note-line">
+      Роман Андреевич Дидковский — первый заместитель председателя СРОО «Возвращение»
+      и руководитель Ассоциации ветеранов СВО Самарской области.
+      Результаты работы по состоянию на ноябрь 2026 года.
+    </div>
+
+    <div class="assoc-grid">
+      <div class="card assoc"><b>500+</b><span>отработанных адресных обращений</span></div>
+      <div class="card assoc"><b>400+</b><span>заявок на вступление в организацию</span></div>
+      <div class="card assoc"><b>400+</b><span>ветеранов СВО и членов их семей посетили Центр отдыха и реабилитации за сезон 2026 года</span></div>
+      <div class="card assoc"><b>100+</b><span>детей отдохнули в детском лагере «Живое детство»</span></div>
+      <div class="card assoc"><b>350+</b><span>«Уроков мужества» проведено в образовательных учреждениях региона</span></div>
+      <div class="card assoc"><b>10+</b><span>конвоев с гуманитарной помощью сопровождено и доставлено в зону проведения СВО</span></div>
+      <div class="card assoc"><b>12</b><span>спортивных турниров и соревнований муниципального, регионального и межрегионального уровня организовано</span></div>
+      <div class="card assoc"><b>40+</b><span>призовых мест заняли участники СРОО «Возвращение» на соревнованиях различного уровня</span></div>
+      <div class="card assoc summary">
+        <b>Работа продолжается</b>
+        <span>Помощь ветеранам СВО и их семьям — одно из ключевых направлений работы депутата</span>
+      </div>
+    </div>
+
+    <!-- Проекты -->
+    <div class="section-head" style="margin-top:38px;">
+      <div class="kicker">Реализованные инициативы</div>
+      <h2>Проекты 2026 года</h2>
+    </div>
+
+    <div class="proj-grid">
+      <div class="card proj">
+        <div class="proj-title">«Вместе Победим»</div>
+        <div class="proj-desc">
+          Проект-победитель конкурса Фонда президентских грантов:
+          развитие следж-хоккея для ветеранов СВО в регионе.
+        </div>
+      </div>
+
+      <div class="card proj">
+        <div class="proj-title">«Возвращение к жизни: на Волге»</div>
+        <div class="proj-desc">
+          Реабилитация и вовлечение в здоровый образ жизни участников СВО и их семей
+          через занятия спортом в Центре отдыха и реабилитации «Возвращение» на Копылово.
+        </div>
+      </div>
+
+      <div class="card proj">
+        <div class="proj-title">Книга «Сердце воина. Непридуманная история одной семьи»</div>
+        <div class="proj-desc">
+          Создание уникальной книги для семей участников СВО. Презентация и размещение
+          изданий в библиотеках муниципалитетов области.
+        </div>
+      </div>
+
+      <div class="card proj">
+        <div class="proj-title">Музей СВО в Самаре</div>
+        <div class="proj-desc">
+          Создание и открытие постоянной экспозиции музея СВО в Самаре.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     ПОДВАЛ
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <span class="footer-brand">Дидковский Р. А.</span>
+    <span>Отчёт о работе депутата · 5 округ · 2026</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var pages = Array.prototype.slice.call(document.querySelectorAll('.page'));
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav a[data-target]'));
+
+  var titles = {
+    home:        'Роман Дидковский — отчёт депутата · 2026',
+    about:       'О депутате — Роман Дидковский',
+    rating:      'Рейтинг проблем — Роман Дидковский',
+    residents:   'Работа с жителями — Роман Дидковский',
+    improvement: 'Благоустройство — Роман Дидковский',
+    events:      'Мероприятия — Роман Дидковский',
+    nakazy:      'Наказы жителей — Роман Дидковский',
+    initiatives: 'Поддержка инициатив — Роман Дидковский',
+    commission:  'Постоянная комиссия — Роман Дидковский',
+    veterans:    'Поддержка ветеранов СВО — Роман Дидковский'
+  };
+
+  function go(id){
+    if(!document.getElementById(id)){ id = 'home'; }
+
+    pages.forEach(function(p){ p.classList.toggle('active', p.id === id); });
+
+    links.forEach(function(a){
+      var on = a.dataset.target === id;
+      a.classList.toggle('active', on);
+      if(on){ a.setAttribute('aria-current','page'); } else { a.removeAttribute('aria-current'); }
+
+      // Прокручиваем активную ссылку в навигации в видимую зону на мобильных
+      if(on && a.scrollIntoView){
+        try{ a.scrollIntoView({inline:'center', block:'nearest'}); }catch(e){}
+      }
+    });
+
+    document.title = titles[id] || titles.home;
+
+    window.scrollTo(0,0);
+  }
+
+  function route(){
+    var id = location.hash ? location.hash.slice(1) : 'home';
+    go(id);
+  }
+
+  window.addEventListener('hashchange', route);
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', route);
+  } else {
+    route();
+  }
+})();
+</script>
+
+</body>
+</html>
